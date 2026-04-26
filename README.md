@@ -3,6 +3,9 @@ SQL and Python analysis of hospital appointment data to identify no-show trends 
 
 # Patient Appointment Intelligence System
 
+## Overview
+This project analyzes hospital appointment data to show-case patterns in missed appointments (no-shows).
+
 ## Tools Used
 - MySQL
 - Python
@@ -12,9 +15,3 @@ SQL and Python analysis of hospital appointment data to identify no-show trends 
 - Identified departments with highest no-show rates
 - Found repeat no-show patients
 - Analyzed trends over time
-
-## SQL Example
-```sql
-SELECT department, COUNT(*) AS total_appointments
-FROM appointments
-GROUP BY department;

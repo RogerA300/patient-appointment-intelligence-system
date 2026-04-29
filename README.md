@@ -16,7 +16,7 @@ This project analyzes hospital appointment data to show-case patterns in missed 
 - Found repeat no-show patients
 - Analyzed trends over time
 
-##Insights
+## Insights
 -Certain departments have significantly higher no-show rates
 -A small subset of patients are repeat offenders
 -No-show rates are trending upward over time

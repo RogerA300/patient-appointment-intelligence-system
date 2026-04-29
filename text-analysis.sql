@@ -22,3 +22,16 @@ WHERE a.status = 'No Show'
 GROUP BY p.name
 ORDER BY total_no_show DESC
 LIMIT 5;
+
+--No-Show Trends Over Time (Monthly)
+SELECT 
+    DATE_FORMAT(appointment_date, '%Y-%m') AS month,
+    COUNT(*) AS total_appointments,
+    SUM(CASE WHEN status = 'No Show' THEN 1 ELSE 0 END) AS no_show_count,
+    ROUND(
+        SUM(CASE WHEN status = 'No Show' THEN 1 ELSE 0 END) * 100.0 / COUNT(*),
+        2
+    ) AS no_show_rate
+FROM appointments
+GROUP BY month
+ORDER BY month;
